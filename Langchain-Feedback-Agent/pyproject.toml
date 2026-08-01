@@ -1,0 +1,12 @@
+[project]
+name = "langchain-feedback-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.3.14",
+    "langchain-openrouter>=0.2.7",
+    "python-dotenv>=1.2.2",
+    "resend>=2.35.0",
+]
