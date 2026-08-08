@@ -58,23 +58,23 @@ def RejectMail(state: ScreeningState) -> ScreeningState:
     result = llm.invoke(prompt)
     return {'email': result.content}
 
-graph = StateGraph(ScreeningState)
-graph.add_node('AnalyzeResumeWithJD', AnalyzeResumeWithJD)
-graph.add_node('ShortListMail', ShortListMail)
-graph.add_node('RejectMail', RejectMail)
+builder = StateGraph(ScreeningState)
+builder.add_node('AnalyzeResumeWithJD', AnalyzeResumeWithJD)
+builder.add_node('ShortListMail', ShortListMail)
+builder.add_node('RejectMail', RejectMail)
 
-graph.add_edge(START, 'AnalyzeResumeWithJD')
-graph.add_conditional_edges('AnalyzeResumeWithJD', CheckCriteria)
-graph.add_edge('ShortListMail', END)
-graph.add_edge('RejectMail', END)
+builder.add_edge(START, 'AnalyzeResumeWithJD')
+builder.add_conditional_edges('AnalyzeResumeWithJD', CheckCriteria)
+builder.add_edge('ShortListMail', END)
+builder.add_edge('RejectMail', END)
 
-workflow = graph.compile()
+graph = builder.compile()
 
-image = workflow.get_graph().draw_mermaid_png()
+image = graph.get_graph().draw_mermaid_png()
 with open("conditional_graph.png", mode="wb") as f:
     f.write(image)
 
-response = workflow.invoke({'resume_text':"""
+response = graph.invoke({'resume_text':"""
 # Ankit Verma
 
 ## Professional Summary

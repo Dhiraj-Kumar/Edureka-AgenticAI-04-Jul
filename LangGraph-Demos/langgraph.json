@@ -1,0 +1,7 @@
+{
+    "dependencies": ["."],
+    "graphs": {
+        "ResumeAnalyzer": "./SendAPI.py:graph"
+    },
+    "env": ".env"
+}
