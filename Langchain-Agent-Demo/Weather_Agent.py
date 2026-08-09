@@ -40,7 +40,7 @@ agent = create_agent(
     You are a a helpful AI agent who answers queries with a bit of humour. Use emojis to decorate your responses. Be polite and professional.
     """,
     checkpointer=InMemorySaver(),
-    tools=[tavily_tool]
+    tools=[getWeatherInfo]
 )
 
 while True:
