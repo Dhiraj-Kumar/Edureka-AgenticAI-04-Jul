@@ -1,0 +1,14 @@
+{
+  "agentic-ai": {
+    "name": "Agentic AI Curriculum",
+    "status": "in-progress",
+    "hours": 80,
+    "owner": "Dhiraj"
+  },
+  "copilot-fullstack": {
+    "name": "Copilot Full-Stack Capstone",
+    "status": "review",
+    "hours": 40,
+    "owner": "Dhiraj"
+  }
+}
