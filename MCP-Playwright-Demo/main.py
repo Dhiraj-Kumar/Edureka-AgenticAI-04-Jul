@@ -1,81 +1,77 @@
 import asyncio, json
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel, Field
 from langchain_openrouter import ChatOpenRouter
 from langchain_mcp_adapters.client import MultiServerMCPClient
+from langchain_mcp_adapters.tools import load_mcp_tools
 from langchain.agents import create_agent
 from dotenv import load_dotenv
 
 load_dotenv()
 
 class Book(BaseModel):
-    title: str = Field(description="string title only")
-    price: float = Field(description="numeric price only, no currency symbol")
-    availability: str = Field(description="e.g. 'In stock', 'Out of stock'")
-    rating: Optional[float] = Field(default=None, description="numeric rating, null if none")
+    title: str = Field(description="Product title exactly as shown")
+    price: float = Field(description="Numeric price, currency symbol stripped")
+    availability: Optional[str] = Field(default=None, description="Stock/availability text if present")
+    rating: Optional[str] = Field(default=None, description="Star rating text if shown, e.g. 'Three'")
 
 
 class ScrapeResult(BaseModel):
-    source_url: str = Field(description="The URL of the page that was scraped")
-    product_count: int = Field(description="Total number of books extracted from the page")
-    products: list[Book] = Field(description="List of all books found on the page")
-    notes: Optional[str] = Field(default=None, description="Optional notes about anything unusual, e.g. missing fields or pagination")
+    source_url: str = Field(description="Page the data was extracted from")
+    product_count: int = Field(description="Number of products captured")
+    products: List[Book] = Field(description="Extracted products")
+    notes: Optional[str] = Field(default=None, description="Anything notable, e.g. pagination present")
 
 llm = ChatOpenRouter(model="gpt-4o-mini")
 
-PROMPT = """You extract book data from a web page using the `fetch` tool.
+SYSTEM_PROMPT = (
+    "You are a web data-extraction agent. Use browser_navigate once to open the "
+    "supplied page. Then use browser_snapshot to inspect the same open page. "
+    "Extract every product tile on that single page: title, price as a number "
+    "without the currency symbol, availability text, and star rating if shown. "
+    "Do not follow pagination. Do not open individual product pages. "
+    "If the page is already open, do not navigate again. "
+    "Set product_count to the number of products captured and source_url to the supplied URL."
+)
 
-1. Call fetch with the given url and max_length=50000 to get the page as markdown.
-2. If content looks truncated, call fetch again with start_index past where you stopped.
-3. Each book tile has a title, a price (like £51.77), and an availability label ('In stock').
-   Ratings appear as a word (One, Two, Three, Four, Five) — convert to the number 1-5, or null if absent.
-   Ignore nav links, the sidebar categories, and pagination.
-4. Extract title, price (number only), availability, rating (1-5 or null) for every book.
-
-Reply with ONLY this JSON, no prose/fences:
-{"source_url":"...","product_count":N,"products":[
- {"title":"...","price":51.77,"availability":"In stock","rating":3}],"notes":null}
-price is a number (no symbol); rating is 1-5 or null. Extract ALL books on the page."""
-
-async def main():
-    client = MultiServerMCPClient({
-        "playwright": {
-            "transport": "stdio",
-            "command": "npx",
-            "args": ["-y", "@playwright/mcp@latest", "--browser", "chromium", "--isolated"]
+async def scrape(url: str) -> ScrapeResult:
+    client = MultiServerMCPClient(
+        {
+            "playwright": {
+                "transport": "stdio",
+                "command": "npx",
+                "args": ["-y", "@playwright/mcp@latest", "--browser", "chromium", "--isolated", "--headless"]
+            }
         }
-    })
-
-    agent = create_agent(
-        model=llm,
-        tools=await client.get_tools(),
-        system_prompt=PROMPT
     )
 
-    async for chunk in agent.astream({"messages": [{"role": "user", "content": "Extract all books from: https://books.toscrape.com/"}]}, stream_mode="values", config={"recursion_limit": 10}):
-        chunk["messages"][-1].pretty_print()
+    async with client.session("playwright") as session:
+        tools = await load_mcp_tools(session)
+        agent = create_agent(
+            model=llm,
+            tools=tools,
+            system_prompt=SYSTEM_PROMPT,
+            response_format=ScrapeResult
+        )
 
-    # res = await agent.ainvoke({"messages": [{"role": "user", "content": "Extract all books from: https://books.toscrape.com/"}]})
+        result = await asyncio.wait_for(
+            agent.ainvoke(
+                {"messages": [{"role": "user", "content": f"Extract the books catalogue from this page: {url}"}]},
+                config={"recursion_limit": 30}
+            ),
+            timeout=180
+        )
 
-    # text = res["messages"][-1].content
-
-    # if isinstance(text, list):
-    #     text = "".join(b.get("text", "") for b in text if isinstance(b, dict))
-
-    #     start = text.find("{")
-    #     end = text.rfind("}") + 1
-    #     json_text = text[start:end]
-
-    #     data = json.loads(json_text)
-    #     data["source_url"]="https://books.toscrape.com/"
-    #     data["product_count"] = len(data.get("products"), [])
-    #     return ScrapeResult.model_validate(data)
-
+        snapshot: ScrapeResult = result["structured_response"]
+        snapshot.product_count = len(snapshot.products)
+        snapshot.source_url = url
+        return snapshot
 
 if __name__ == "__main__":
-    result = asyncio.run(main())
-    # print(result)
-    # for i, p in enumerate(result.products, 1):
-    #     print(f"{i}. {p.title} — ${p.price:.2f} | {p.availability} | {p.rating or 'no rating'}")
-    # print(f"\n{result.product_count} products", f"| {result.notes}" if result.notes else "")
-
+    url = input("Enter URL: ")
+    result = asyncio.run(scrape(url))
+    for i, p in enumerate(result.products, 1):
+        print(f"{i}. {p.title} — £{p.price:.2f} | {p.availability or '—'} | {p.rating or 'no'} rating")
+    print(f"\n{result.product_count} products from {result.source_url}")
+    if result.notes:
+        print(f"Notes: {result.notes}")

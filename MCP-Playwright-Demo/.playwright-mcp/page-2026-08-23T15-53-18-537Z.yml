@@ -1,0 +1,435 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - alert [ref=e3]:
+      - generic [ref=e4]:
+        - link "Web Scraper Cloud replaces your complex scraping stack. Try it free for 7 days" [ref=e5] [cursor=pointer]:
+          - /url: https://cloud.webscraper.io/register?utm_source=cloud-landing&utm_medium=announcement-bar
+        - button "Close" [ref=e8] [cursor=pointer]
+    - navigation "Primary" [ref=e11]:
+      - generic [ref=e12]:
+        - link "Web Scraper" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - img "Web Scraper"
+        - generic [ref=e14]:
+          - list [ref=e15]:
+            - listitem [ref=e16]:
+              - link "Web Scraper Cloud" [ref=e17] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e18]:
+              - link "Extension" [ref=e19] [cursor=pointer]:
+                - /url: /web-scraper-extension
+            - listitem [ref=e20]:
+              - link "Pricing" [ref=e21] [cursor=pointer]:
+                - /url: /pricing
+            - listitem [ref=e22]:
+              - link "Marketplace" [ref=e23] [cursor=pointer]:
+                - /url: /marketplace
+            - listitem [ref=e24]:
+              - button "Learn" [ref=e25] [cursor=pointer]
+          - generic [ref=e28]:
+            - link "Install extension" [ref=e29] [cursor=pointer]:
+              - /url: https://chromewebstore.google.com/detail/web-scraper/jnhgnonknehpejjnehehllkliplmbmhn?hl=en
+              - generic [ref=e30]: 
+              - text: Install extension
+            - link "Cloud login" [ref=e31] [cursor=pointer]:
+              - /url: https://cloud.webscraper.io/
+  - main [ref=e33]:
+    - heading "Test Sites" [level=1] [ref=e38]
+    - generic [ref=e40]:
+      - navigation [ref=e42]:
+        - list [ref=e44]:
+          - listitem [ref=e45]:
+            - link "Home" [ref=e46] [cursor=pointer]:
+              - /url: /test-sites/e-commerce/allinone
+          - listitem [ref=e47]:
+            - link "Navigation category" [ref=e48] [cursor=pointer]:
+              - /url: /test-sites/e-commerce/allinone/computers
+              - text: Computers
+              - generic [ref=e49]: 
+            - list [ref=e50]:
+              - listitem [ref=e51]:
+                - link "Navigation subcategory" [ref=e52] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/computers/laptops
+                  - text: Laptops
+              - listitem [ref=e53]:
+                - link "Navigation subcategory" [ref=e54] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/computers/tablets
+                  - text: Tablets
+          - listitem [ref=e55]:
+            - link "Navigation category" [ref=e56] [cursor=pointer]:
+              - /url: /test-sites/e-commerce/allinone/phones
+              - text: Phones
+              - generic [ref=e57]: 
+      - generic [ref=e58]:
+        - heading "Computers / Tablets" [level=1] [ref=e59]
+        - paragraph [ref=e60]: 21 items
+        - generic [ref=e61]:
+          - generic [ref=e64]:
+            - img "item" [ref=e65]
+            - generic [ref=e66]:
+              - heading "$69.99" [level=4] [ref=e67]
+              - heading [level=4] [ref=e68]:
+                - link "Lenovo IdeaTab" [ref=e69] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/10
+              - paragraph [ref=e70]: 7" screen, Android
+            - generic [ref=e71]:
+              - paragraph [ref=e72]: 7 reviews
+              - paragraph [ref=e73]:
+                - generic [ref=e74]: 
+                - generic [ref=e75]: 
+                - generic [ref=e76]: 
+          - generic [ref=e79]:
+            - img "item" [ref=e80]
+            - generic [ref=e81]:
+              - heading "$88.99" [level=4] [ref=e82]
+              - heading [level=4] [ref=e83]:
+                - link "IdeaTab A3500L" [ref=e84] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/15
+              - paragraph [ref=e85]: Black, 7" IPS, Quad-Core 1.2GHz, 8GB, Android 4.2
+            - generic [ref=e86]:
+              - paragraph [ref=e87]: 7 reviews
+              - paragraph [ref=e88]:
+                - generic [ref=e89]: 
+                - generic [ref=e90]: 
+                - generic [ref=e91]: 
+                - generic [ref=e92]: 
+          - generic [ref=e95]:
+            - img "item" [ref=e96]
+            - generic [ref=e97]:
+              - heading "$96.99" [level=4] [ref=e98]
+              - heading [level=4] [ref=e99]:
+                - link "Acer Iconia" [ref=e100] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/11
+              - paragraph [ref=e101]: 7" screen, Android, 16GB
+            - generic [ref=e102]:
+              - paragraph [ref=e103]: 7 reviews
+              - paragraph [ref=e104]:
+                - generic [ref=e105]: 
+          - generic [ref=e108]:
+            - img "item" [ref=e109]
+            - generic [ref=e110]:
+              - heading "$97.99" [level=4] [ref=e111]
+              - heading [level=4] [ref=e112]:
+                - link "Galaxy Tab 3" [ref=e113] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/18
+              - paragraph [ref=e114]: 7", 8GB, Wi-Fi, Android 4.2, White
+            - generic [ref=e115]:
+              - paragraph [ref=e116]: 2 reviews
+              - paragraph [ref=e117]:
+                - generic [ref=e118]: 
+                - generic [ref=e119]: 
+          - generic [ref=e122]:
+            - img "item" [ref=e123]
+            - generic [ref=e124]:
+              - heading "$99.99" [level=4] [ref=e125]
+              - heading [level=4] [ref=e126]:
+                - link "Iconia B1-730H..." [ref=e127] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/27
+              - paragraph [ref=e128]: Black, 7", 1.6GHz Dual-Core, 8GB, Android 4.4
+            - generic [ref=e129]:
+              - paragraph [ref=e130]: 1 reviews
+              - paragraph [ref=e131]:
+                - generic [ref=e132]: 
+                - generic [ref=e133]: 
+                - generic [ref=e134]: 
+          - generic [ref=e137]:
+            - img "item" [ref=e138]
+            - generic [ref=e139]:
+              - heading "$101.99" [level=4] [ref=e140]
+              - heading [level=4] [ref=e141]:
+                - link "Memo Pad HD 7" [ref=e142] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/23
+              - paragraph [ref=e143]: IPS, Dual-Core 1.2GHz, 8GB, Android 4.3
+            - generic [ref=e144]:
+              - paragraph [ref=e145]: 10 reviews
+              - paragraph [ref=e146]:
+                - generic [ref=e147]: 
+                - generic [ref=e148]: 
+          - generic [ref=e151]:
+            - img "item" [ref=e152]
+            - generic [ref=e153]:
+              - heading "$102.99" [level=4] [ref=e154]
+              - heading [level=4] [ref=e155]:
+                - link "Asus MeMO Pad" [ref=e156] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/12
+              - paragraph [ref=e157]: 7" screen, Android, 8GB
+            - generic [ref=e158]:
+              - paragraph [ref=e159]: 14 reviews
+              - paragraph [ref=e160]:
+                - generic [ref=e161]: 
+                - generic [ref=e162]: 
+                - generic [ref=e163]: 
+                - generic [ref=e164]: 
+          - generic [ref=e167]:
+            - img "item" [ref=e168]
+            - generic [ref=e169]:
+              - heading "$103.99" [level=4] [ref=e170]
+              - heading [level=4] [ref=e171]:
+                - link "Amazon Kindle" [ref=e172] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/13
+              - paragraph [ref=e173]: 6" screen, wifi
+            - generic [ref=e174]:
+              - paragraph [ref=e175]: 3 reviews
+              - paragraph [ref=e176]:
+                - generic [ref=e177]: 
+                - generic [ref=e178]: 
+                - generic [ref=e179]: 
+                - generic [ref=e180]: 
+          - generic [ref=e183]:
+            - img "item" [ref=e184]
+            - generic [ref=e185]:
+              - heading "$107.99" [level=4] [ref=e186]
+              - heading [level=4] [ref=e187]:
+                - link "Galaxy Tab 3" [ref=e188] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/22
+              - paragraph [ref=e189]: 7", 8GB, Wi-Fi, Android 4.2, Yellow
+            - generic [ref=e190]:
+              - paragraph [ref=e191]: 14 reviews
+              - paragraph [ref=e192]:
+                - generic [ref=e193]: 
+                - generic [ref=e194]: 
+          - generic [ref=e197]:
+            - img "item" [ref=e198]
+            - generic [ref=e199]:
+              - heading "$121.99" [level=4] [ref=e200]
+              - heading [level=4] [ref=e201]:
+                - link "IdeaTab A8-50" [ref=e202] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/28
+              - paragraph [ref=e203]: Blue, 8" IPS, Quad-Core 1.3GHz, 16GB, Android 4.2
+            - generic [ref=e204]:
+              - paragraph [ref=e205]: 13 reviews
+              - paragraph [ref=e206]:
+                - generic [ref=e207]: 
+                - generic [ref=e208]: 
+          - generic [ref=e211]:
+            - img "item" [ref=e212]
+            - generic [ref=e213]:
+              - heading "$130.99" [level=4] [ref=e214]
+              - heading [level=4] [ref=e215]:
+                - link "MeMO Pad 7" [ref=e216] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/20
+              - paragraph [ref=e217]: White, 7", Atom 1.2GHz, 8GB, Android 4.4
+            - generic [ref=e218]:
+              - paragraph [ref=e219]: 11 reviews
+              - paragraph [ref=e220]:
+                - generic [ref=e221]: 
+          - generic [ref=e224]:
+            - img "item" [ref=e225]
+            - generic [ref=e226]:
+              - heading "$148.99" [level=4] [ref=e227]
+              - heading [level=4] [ref=e228]:
+                - link "IdeaTab A3500-..." [ref=e229] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/17
+              - paragraph [ref=e230]: Blue, 7" IPS, Quad-Core 1.3GHz, 8GB, 3G, Android 4.2
+            - generic [ref=e231]:
+              - paragraph [ref=e232]: 9 reviews
+              - paragraph [ref=e233]:
+                - generic [ref=e234]: 
+                - generic [ref=e235]: 
+          - generic [ref=e238]:
+            - img "item" [ref=e239]
+            - generic [ref=e240]:
+              - heading "$172.99" [level=4] [ref=e241]
+              - heading [level=4] [ref=e242]:
+                - link "IdeaTab S5000" [ref=e243] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/26
+              - paragraph [ref=e244]: Silver, 7" IPS, Quad-Core 1.2Ghz, 16GB, 3G, Android 4.2
+            - generic [ref=e245]:
+              - paragraph [ref=e246]: 8 reviews
+              - paragraph [ref=e247]:
+                - generic [ref=e248]: 
+                - generic [ref=e249]: 
+                - generic [ref=e250]: 
+          - generic [ref=e253]:
+            - img "item" [ref=e254]
+            - generic [ref=e255]:
+              - heading "$233.99" [level=4] [ref=e256]
+              - heading [level=4] [ref=e257]:
+                - link "Galaxy Tab 4" [ref=e258] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/21
+              - paragraph [ref=e259]: LTE (SM-T235), Quad-Core 1.2GHz, 8GB, Black
+            - generic [ref=e260]:
+              - paragraph [ref=e261]: 1 reviews
+              - paragraph [ref=e262]:
+                - generic [ref=e263]: 
+                - generic [ref=e264]: 
+                - generic [ref=e265]: 
+                - generic [ref=e266]: 
+          - generic [ref=e269]:
+            - img "item" [ref=e270]
+            - generic [ref=e271]:
+              - heading "$251.99" [level=4] [ref=e272]
+              - heading [level=4] [ref=e273]:
+                - link "Galaxy Tab" [ref=e274] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/16
+              - paragraph [ref=e275]: 16GB, White
+            - generic [ref=e276]:
+              - paragraph [ref=e277]: 14 reviews
+              - paragraph [ref=e278]:
+                - generic [ref=e279]: 
+                - generic [ref=e280]: 
+                - generic [ref=e281]: 
+          - generic [ref=e284]:
+            - img "item" [ref=e285]
+            - generic [ref=e286]:
+              - heading "$320.99" [level=4] [ref=e287]
+              - heading [level=4] [ref=e288]:
+                - link "MeMo PAD FHD 1..." [ref=e289] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/25
+              - paragraph [ref=e290]: White, 10.1" IPS, 1.6GHz, 2GB, 16GB, Android 4.2
+            - generic [ref=e291]:
+              - paragraph [ref=e292]: 7 reviews
+              - paragraph [ref=e293]:
+                - generic [ref=e294]: 
+                - generic [ref=e295]: 
+          - generic [ref=e298]:
+            - img "item" [ref=e299]
+            - generic [ref=e300]:
+              - heading "$399.99" [level=4] [ref=e301]
+              - heading [level=4] [ref=e302]:
+                - link "Galaxy Note" [ref=e303] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/29
+              - paragraph [ref=e304]: 10.1", 3G, Android 4.0, Garnet Red
+            - generic [ref=e305]:
+              - paragraph [ref=e306]: 12 reviews
+              - paragraph [ref=e307]:
+                - generic [ref=e308]: 
+                - generic [ref=e309]: 
+                - generic [ref=e310]: 
+                - generic [ref=e311]: 
+          - generic [ref=e314]:
+            - img "item" [ref=e315]
+            - generic [ref=e316]:
+              - heading "$489.99" [level=4] [ref=e317]
+              - heading [level=4] [ref=e318]:
+                - link "Galaxy Note" [ref=e319] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/19
+              - paragraph [ref=e320]: 12.2", 32GB, WiFi, Android 4.4, White
+            - generic [ref=e321]:
+              - paragraph [ref=e322]: 9 reviews
+              - paragraph [ref=e323]:
+                - generic [ref=e324]: 
+                - generic [ref=e325]: 
+                - generic [ref=e326]: 
+          - generic [ref=e329]:
+            - img "item" [ref=e330]
+            - generic [ref=e331]:
+              - heading "$537.99" [level=4] [ref=e332]
+              - heading [level=4] [ref=e333]:
+                - link "iPad Mini Reti..." [ref=e334] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/14
+              - paragraph [ref=e335]: Wi-Fi + Cellular, 32GB, Silver
+            - generic [ref=e336]:
+              - paragraph [ref=e337]: 8 reviews
+              - paragraph [ref=e338]:
+                - generic [ref=e339]: 
+                - generic [ref=e340]: 
+          - generic [ref=e343]:
+            - img "item" [ref=e344]
+            - generic [ref=e345]:
+              - heading "$587.99" [level=4] [ref=e346]
+              - heading [level=4] [ref=e347]:
+                - link "Galaxy Note 10..." [ref=e348] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/24
+              - paragraph [ref=e349]: 10.1", 32GB, Black
+            - generic [ref=e350]:
+              - paragraph [ref=e351]: 6 reviews
+              - paragraph [ref=e352]:
+                - generic [ref=e353]: 
+                - generic [ref=e354]: 
+          - generic [ref=e357]:
+            - img "item" [ref=e358]
+            - generic [ref=e359]:
+              - heading "$603.99" [level=4] [ref=e360]
+              - heading [level=4] [ref=e361]:
+                - link "Apple iPad Air" [ref=e362] [cursor=pointer]:
+                  - /url: /test-sites/e-commerce/allinone/product/30
+              - paragraph [ref=e363]: Wi-Fi, 64GB, Silver
+            - generic [ref=e364]:
+              - paragraph [ref=e365]: 7 reviews
+              - paragraph [ref=e366]:
+                - generic [ref=e367]: 
+                - generic [ref=e368]: 
+                - generic [ref=e369]: 
+  - contentinfo [ref=e370]:
+    - generic [ref=e371]:
+      - generic [ref=e372]:
+        - generic [ref=e373]:
+          - heading "Products" [level=2] [ref=e374]:
+            - button "Products"
+          - list [ref=e376]:
+            - listitem [ref=e377]:
+              - link "Web Scraper browser extension" [ref=e378] [cursor=pointer]:
+                - /url: https://chromewebstore.google.com/detail/web-scraper/jnhgnonknehpejjnehehllkliplmbmhn?hl=en
+            - listitem [ref=e379]:
+              - link "Web Scraper Cloud" [ref=e380] [cursor=pointer]:
+                - /url: /
+        - generic [ref=e381]:
+          - heading "Company" [level=2] [ref=e382]:
+            - button "Company"
+          - list [ref=e384]:
+            - listitem [ref=e385]:
+              - link "About us" [ref=e386] [cursor=pointer]:
+                - /url: /about-us
+            - listitem [ref=e387]:
+              - link "Contacts" [ref=e388] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e389]:
+              - link "Website Privacy Policy" [ref=e390] [cursor=pointer]:
+                - /url: /privacy-policy
+            - listitem [ref=e391]:
+              - link "Browser Extension Privacy Policy" [ref=e392] [cursor=pointer]:
+                - /url: /extension-privacy-policy
+            - listitem [ref=e393]:
+              - link "Media kit" [ref=e394] [cursor=pointer]:
+                - /url: https://webscraper.io/downloads/Web_Scraper_Media_Kit.zip
+        - generic [ref=e395]:
+          - heading "Resources" [level=2] [ref=e396]:
+            - button "Resources"
+          - list [ref=e398]:
+            - listitem [ref=e399]:
+              - link "Blog" [ref=e400] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e401]:
+              - link "Documentation" [ref=e402] [cursor=pointer]:
+                - /url: /documentation
+            - listitem [ref=e403]:
+              - link "Video Tutorials" [ref=e404] [cursor=pointer]:
+                - /url: /tutorials
+            - listitem [ref=e405]:
+              - link "Test Sites" [ref=e406] [cursor=pointer]:
+                - /url: /test-sites
+            - listitem [ref=e407]:
+              - link "Forum" [ref=e408] [cursor=pointer]:
+                - /url: https://forum.webscraper.io/
+            - listitem [ref=e409]:
+              - link "Status" [ref=e410] [cursor=pointer]:
+                - /url: https://status.webscraper.io/
+        - generic [ref=e411]:
+          - heading "Contact us" [level=2] [ref=e412]:
+            - button "Contact us"
+          - generic [ref=e413]:
+            - list [ref=e414]:
+              - listitem [ref=e415]:
+                - link "info@webscraper.io" [ref=e416] [cursor=pointer]:
+                  - /url: mailto:info@webscraper.io
+              - listitem [ref=e417]: Ubelu 5-71,Adazi, Latvia, LV-2164
+            - generic [ref=e418]:
+              - link "Web Scraper on Facebook" [ref=e419] [cursor=pointer]:
+                - /url: https://www.facebook.com/webscraperio/
+                - generic [ref=e420]: 
+              - link "Web Scraper on LinkedIn" [ref=e421] [cursor=pointer]:
+                - /url: https://lv.linkedin.com/company/web-scraper
+                - generic [ref=e422]: 
+              - link "Web Scraper on Youtube" [ref=e423] [cursor=pointer]:
+                - /url: https://youtube.com/@WebScraper/videos
+                - generic [ref=e424]: 
+              - link "Download the Web Scraper extension" [ref=e425] [cursor=pointer]:
+                - /url: https://chromewebstore.google.com/detail/web-scraper/jnhgnonknehpejjnehehllkliplmbmhn?hl=en
+                - generic [ref=e426]: 
+      - text:    
+      - generic [ref=e427]:
+        - link "Web Scraper" [ref=e428] [cursor=pointer]:
+          - /url: /
+          - img "Web Scraper"
+        - paragraph [ref=e429]: Copyright © 2026 Web Scraper | All rights reserved
