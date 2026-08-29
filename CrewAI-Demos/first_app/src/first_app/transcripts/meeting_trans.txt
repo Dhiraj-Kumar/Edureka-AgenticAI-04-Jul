@@ -1,0 +1,98 @@
+Rohit (Project Manager):
+Okay, um, good morning everyone. Let’s start. So yeah, today’s meeting is about the Q2 product release planning. Uh, before we begin, can everyone hear me properly?
+
+Ananya (Product Owner):
+Yes, yes, we can hear you. All good.
+
+Vikram (Engineering Lead):
+Yeah, it’s clear.
+
+Rohit:
+Alright. So basically, uh, the agenda is to discuss the scope for the Q2 release, timelines, and any blockers we have right now. Also, we need to finalize responsibilities. So yeah, that’s the plan.
+
+Ananya:
+Right. So from a product side, the main priority for Q2 is the User Analytics Dashboard. We had discussed this earlier also, I think last week or maybe the week before. The goal is to give clients better visibility into usage metrics.
+
+Vikram:
+Yeah, so from engineering side, we’ve already started some backend work for analytics. But honestly, the frontend part is still pending. We might need around, uh, three weeks for backend and maybe two more weeks for frontend.
+
+Rohit:
+Okay, so roughly five weeks in total. That fits within Q2, I think. Uh, any dependencies there?
+
+Vikram:
+Yes, one dependency is the final UI designs. We haven’t received the final designs yet from the design team.
+
+Ananya:
+Right, that’s true. I spoke to the design team yesterday. They said they can share the final designs by next Monday.
+
+Rohit:
+Next Monday meaning, uh, 10th April?
+
+Ananya:
+Yes, April 10th.
+
+Rohit:
+Okay, noted.
+
+Vikram:
+Once we get the designs, frontend development can start immediately.
+
+Rohit:
+Alright. Now, coming to testing. Do we have QA bandwidth available?
+
+Vikram:
+Currently QA is tied up with the hotfix release. But they should be free by mid-April.
+
+Rohit:
+Mid-April, okay. So we can plan testing from, say, April 15th?
+
+Vikram:
+Yes, that should work.
+
+Ananya:
+Also, one more thing. The sales team requested a small enhancement for export reports in Excel format. They want this included in Q2 if possible.
+
+Rohit:
+Hmm. Is that part of the original scope?
+
+Ananya:
+No, not originally, but it’s a small change.
+
+Vikram:
+From engineering perspective, export to Excel shouldn’t take more than two days.
+
+Rohit:
+Alright, then let’s include it in Q2. But let’s make sure it doesn’t impact the main dashboard delivery.
+
+Ananya:
+Agreed.
+
+Rohit:
+Okay, action items then. Ananya, you’ll follow up with the design team and ensure we get the final UI designs by April 10th.
+
+Ananya:
+Yes, I’ll do that.
+
+Rohit:
+Vikram, you’ll plan the backend and frontend tasks and share a detailed timeline by end of this week.
+
+Vikram:
+Sure, I’ll share it by Friday.
+
+Rohit:
+And I’ll coordinate with QA to confirm availability starting April 15th.
+
+Vikram:
+Sounds good.
+
+Rohit:
+Anything else? Uh, if there’s nothing else, we can wrap up.
+
+Ananya:
+Nothing from my side.
+
+Vikram:
+All good.
+
+Rohit:
+Okay then, thanks everyone. Let’s catch up next week.

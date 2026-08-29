@@ -1,0 +1,30 @@
+clean_transcript:
+  description: >
+    Review the raw meeting transcript and rewrite it into
+    a clean, readable format. Remove filler words, repeated
+    phrases, side conversations, and unrelated discussions.
+    Preserve the original meaning and sequence of the meeting.
+    Transcript: {transcript}
+  expected_output: >
+    A clearly formatted and readable meeting transcript
+    with no irrelevant or repetitive content.
+  agent: transcript_cleaner
+
+generate_summary:
+  description: >
+    Analyze the cleaned meeting transcript and produce a
+    concise summary of the meeting. Focus on main discussion
+    topics, key decisions taken, and overall meeting outcomes.
+  expected_output: >
+    A structured summary using bullet points or short paragraphs.
+  agent: meeting_summarizer
+
+extract_action_items:
+  description: >
+    Identify all follow-up actions mentioned or implied in
+    the cleaned meeting transcript. Clearly list each action,
+    along with the responsible person and deadline wherever available.
+  expected_output: >
+    A bullet-point list of action items with owners and timelines.
+  agent: action_item_extractor
+  output_file: output/MOM.md

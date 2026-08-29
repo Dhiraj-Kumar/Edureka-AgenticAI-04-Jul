@@ -1,0 +1,3 @@
+- **Ananya:** Follow up with the design team to confirm UI designs by **April 10th**.
+- **Vikram:** Plan backend and frontend tasks and share a detailed timeline by the end of the week (**Friday**).
+- **Rohit:** Coordinate with QA to confirm resource availability starting **April 15th**.
