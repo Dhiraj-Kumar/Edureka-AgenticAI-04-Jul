@@ -1,0 +1,25 @@
+[project]
+name = "mcp_crew"
+version = "0.1.0"
+description = "mcp_crew using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai-tools[mcp]>=1.14.7",
+    "crewai[tools]==1.14.7",
+]
+
+[project.scripts]
+mcp_crew = "mcp_crew.main:run"
+run_crew = "mcp_crew.main:run"
+train = "mcp_crew.main:train"
+replay = "mcp_crew.main:replay"
+test = "mcp_crew.main:test"
+run_with_trigger = "mcp_crew.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

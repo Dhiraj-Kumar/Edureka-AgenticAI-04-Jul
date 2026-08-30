@@ -1,0 +1,8 @@
+research_task:
+  description: >
+    Conduct a thorough research about weather for city: {city}
+    Make sure you find any interesting and relevant information given
+    the city name.
+  expected_output: >
+    A list with 10 bullet points of the most relevant weather information about city
+  agent: researcher

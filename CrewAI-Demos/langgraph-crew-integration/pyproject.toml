@@ -1,0 +1,13 @@
+[project]
+name = "langgraph-crew-integration"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.2.11",
+    "mcp-crew",
+]
+
+[tool.uv.sources]
+mcp-crew = { path = "../mcp_crew" }

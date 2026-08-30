@@ -4,6 +4,7 @@ from crewai.agents.agent_builder.base_agent import BaseAgent
 from pydantic import BaseModel, Field
 from typing import List
 from crewai_tools import SerperDevTool
+from langchain_community.tools import DuckDuckGoSearchRun
 
 class TrendingCompany(BaseModel):
     """ A company that is in the new and attracting attention """
@@ -26,6 +27,7 @@ class TrendingCompanyResearchList(BaseModel):
     """A list of detailed research on all the companies"""
     research_list: List[TrendingCompanyResearch] = Field(description="Comprehensive research on all trending companies")
 
+# web_search = DuckDuckGoSearchRun()
 
 @CrewBase
 class Stockpicker():
@@ -34,11 +36,13 @@ class Stockpicker():
     agents: list[BaseAgent]
     tasks: list[Task]
 
+
     @agent
     def trending_company_finder(self) -> Agent:
         return Agent(
             config=self.agents_config['trending_company_finder'],
             verbose=True,
+            # tools=[web_search]
             tools=[SerperDevTool()]
         )
 
