@@ -1,0 +1,15 @@
+[project]
+name = "self-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.4.0",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.2",
+    "langchain-openai>=1.6.0",
+    "langchain-openrouter>=0.2.8",
+    "pypdf>=6.17.0",
+    "python-dotenv>=1.2.3",
+]
