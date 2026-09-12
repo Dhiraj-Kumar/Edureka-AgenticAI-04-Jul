@@ -18,4 +18,4 @@ services:
       POSTGRES_PASSWORD: password1234
       POSTGRES_DB: conversationdb
     ports:
-      - "5431:5432"
+      - "5432:5432"

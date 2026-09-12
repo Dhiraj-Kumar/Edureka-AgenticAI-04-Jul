@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: LangGraph Dashboards
+    orgId: 1
+    folder: LangGraph
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards

@@ -1,0 +1,17 @@
+[project]
+name = "opentelemetry-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.4.0",
+    "langchain-openai>=1.6.2",
+    "langchain-openrouter>=0.2.8",
+    "langgraph>=1.2.11",
+    "opentelemetry-api>=1.44.0",
+    "opentelemetry-exporter-otlp-proto-http>=1.44.0",
+    "opentelemetry-sdk>=1.44.0",
+    "prometheus-client>=0.26.0",
+    "python-dotenv>=1.2.3",
+]

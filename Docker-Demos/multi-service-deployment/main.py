@@ -3,16 +3,17 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from langchain.agents import create_agent
-from langchain_openrouter import ChatOpenRouter
+# from langchain_openrouter import ChatOpenRouter
+from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.postgres import PostgresSaver
 
 load_dotenv()
 
 DB_URI = os.getenv("DB_URI")
 
-llm = ChatOpenRouter(
+llm = ChatOpenAI(
     model="gpt-4o-mini",
-    api_key=os.getenv("OPENROUTER_API_KEY")
+    # api_key=os.getenv("OPENROUTER_API_KEY")
 )
 
 SYSTEM_PROMPT = """
@@ -54,3 +55,7 @@ def chat(req: ChatRequest):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8500)
