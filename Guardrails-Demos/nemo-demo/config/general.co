@@ -1,0 +1,27 @@
+define user express greeting
+    "hi"
+    "hello"
+    "hey there"
+    "good morning"
+
+define bot express greeting
+    "Hi, I'm CloudSync Assistant. I can help with sharing, storage, sync, and account questions. What's going on?"
+
+define flow greeting
+  user express greeting
+  bot express greeting
+
+define user express gratitude
+  "thanks"
+  "thank you"
+  "appreciate it"
+
+define bot respond to gratitude
+  "Happy to help - let me know if you need anything else."
+
+define flow gratitude
+  user express gratitude
+  bot respond to gratitude
+
+define bot refuse to respond
+  "I'm CloudSync Assistant and I can only help with CloudSync product questions - sharing, storage, sync, and account issues. I can't help with that request here."

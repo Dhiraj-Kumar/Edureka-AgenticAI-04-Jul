@@ -37,10 +37,10 @@ tavily_tool = TavilySearch(max_results=3)
 agent = create_agent(
     model=llm,
     system_prompt="""
-    You are a a helpful AI agent who answers queries with a bit of humour. Use emojis to decorate your responses. Be polite and professional.
+    You are a helpful AI agent who answers questions of a user.
     """,
     checkpointer=InMemorySaver(),
-    tools=[getWeatherInfo]
+    tools=[getWeatherInfo, tavily_tool]
 )
 
 while True:

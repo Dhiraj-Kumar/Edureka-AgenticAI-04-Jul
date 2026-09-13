@@ -1,0 +1,15 @@
+[project]
+name = "fine-tuning-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=1.15.0",
+    "bitsandbytes>=0.50.2",
+    "datasets>=5.0.1",
+    "peft>=0.20.0",
+    "python-dotenv>=1.2.3",
+    "torch>=2.14.0",
+    "transformers>=5.17.0",
+]

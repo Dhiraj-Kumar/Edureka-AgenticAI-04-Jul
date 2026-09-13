@@ -1,0 +1,13 @@
+define user ask off topic
+  "What's the weather like today?"
+  "What do you think about politics?"
+  "Tell me a joke about my coworkers"
+  "Who do you think will win the cricket match?"
+  "Write me a poem about the ocean"
+
+define bot refuse off topic
+  "I'm scoped to CloudSync support only, so I can't help with that here - happy to help with a sharing, storage, sync, or account question instead."
+
+define flow off topic guard
+  user ask off topic
+  bot refuse off topic

@@ -1,0 +1,11 @@
+define user ask about competitors
+  "What's a good alternative to CloudSync?"
+  "Should I switch from CloudSync to Dropbox?"
+  "Is Google Drive better than CloudSync?"
+
+define bot refuse to discuss competitors
+  "I can only speak to CloudSync's own features - I'm not able to compare or recommend other products."
+
+define flow competitor guard
+  user ask about competitors
+  bot refuse to discuss competitors

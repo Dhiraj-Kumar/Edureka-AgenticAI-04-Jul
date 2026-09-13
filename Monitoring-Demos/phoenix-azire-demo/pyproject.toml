@@ -1,0 +1,18 @@
+[project]
+name = "phoenix-azire-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "arize-phoenix>=20.11.0",
+    "langchain>=1.4.0",
+    "langchain-chroma>=1.1.0",
+    "langchain-huggingface>=1.2.2",
+    "langchain-openai>=1.6.2",
+    "langchain-openrouter>=0.2.8",
+    "numpy>=2.4.6",
+    "openinference-instrumentation-langchain>=0.1.76",
+    "python-dotenv>=1.2.3",
+    "sentence-transformers>=6.0.1",
+]
